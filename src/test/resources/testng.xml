@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Sample Tests" verbose="1" >
+    <test name="Regression" >
+        <classes>
+            <class name="Tests.SampleTests">
+                <methods>
+                    <include name="Test1" />
+                    <include name="Test2" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
