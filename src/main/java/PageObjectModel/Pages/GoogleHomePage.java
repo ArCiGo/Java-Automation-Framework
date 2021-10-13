@@ -1,5 +1,6 @@
 package PageObjectModel.Pages;
 
+import PageObjectModel.Components.Home.HomeBodyComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +12,7 @@ public class GoogleHomePage extends BasePage {
 
     // Attributes
     private WebDriverWait wait;
+    private HomeBodyComponent homeBodyComponent;
 
     // Elements
     @FindBy(how = How.XPATH, using = "//img[@alt='Google']")
@@ -20,6 +22,7 @@ public class GoogleHomePage extends BasePage {
     public GoogleHomePage(WebDriver driver) {
         super(driver);
         wait = new WebDriverWait(driver, 5);
+        this.homeBodyComponent = new HomeBodyComponent(driver);
     }
 
     // Actions
@@ -32,11 +35,15 @@ public class GoogleHomePage extends BasePage {
      */
     public boolean isLoaded() {
         try {
-            return wait.until(ExpectedConditions.visibilityOf(googleLogoImg)).isDisplayed();
+            return wait.until(ExpectedConditions.visibilityOf(this.googleLogoImg)).isDisplayed();
         } catch (Exception ex) {
             return false;
         }
     }
 
+    public GoogleResultsPage fillSearchForm(String search) {
+        this.homeBodyComponent.fillSearchForm(search);
 
+        return new GoogleResultsPage(driver);
+    }
 }

@@ -1,12 +1,11 @@
 package AutomationResources;
 
+import PageObjectModel.Utilities.Log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.io.File;
-
 import static Utilities.OperatingSystem.getOperatingSystem;
 
 public class WebDriverFactory {
@@ -18,8 +17,8 @@ public class WebDriverFactory {
             case Firefox:
                 return getFirefoxDriver();
             default:
-                // Log.error("No such browser exists!");
-                return null;
+                Log.error("No such browser exists!");
+                return  null;
         }
     }
 
@@ -39,9 +38,9 @@ public class WebDriverFactory {
                 chromeFilePath = new File(rootPath + "/driversformac", "chromedriver");
                 System.setProperty("webdriver.chrome.driver", chromeFilePath.getPath());
                 break;
-            /* default:
+            default:
                 Log.error("Unknown Operating System!");
-                break; */
+                break;
         }
 
         return new ChromeDriver(options);
@@ -60,9 +59,9 @@ public class WebDriverFactory {
                 firefoxFilePath = new File(rootPath + "/driversformac", "geckodriver");
                 System.setProperty("webdriver.gecko.driver", firefoxFilePath.getPath());
                 break;
-            /* default:
+            default:
                 Log.error("Unknown Operating System!");
-                break; */
+                break;
         }
 
         return new FirefoxDriver();

@@ -22,7 +22,7 @@ public class GoogleResultsPage extends BasePage {
     public GoogleResultsPage(WebDriver driver) {
         super(driver);
         wait = new WebDriverWait(driver, 5);
-        resultsBodyComponent = new ResultsBodyComponent(driver);
+        this.resultsBodyComponent = new ResultsBodyComponent(driver);
     }
 
     // Actions
@@ -31,13 +31,13 @@ public class GoogleResultsPage extends BasePage {
      */
     public boolean isLoaded() {
         try {
-            return wait.until(ExpectedConditions.visibilityOf(googleLogoImg)).isDisplayed();
+            return wait.until(ExpectedConditions.visibilityOf(this.googleLogoImg)).isDisplayed();
         } catch (Exception ex) {
             return false;
         }
     }
 
-    public boolean ResultsLabelIsLoaded() {
-        return resultsBodyComponent.resultsLabelIsLoaded();
+    public boolean resultsLabelIsLoaded() {
+        return this.resultsBodyComponent.resultsLabelIsLoaded();
     }
 }

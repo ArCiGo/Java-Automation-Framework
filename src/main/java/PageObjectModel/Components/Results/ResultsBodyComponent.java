@@ -21,6 +21,7 @@ public class ResultsBodyComponent extends GoogleComponent {
     public ResultsBodyComponent(WebDriver driver) {
         super(driver);
         wait = new WebDriverWait(driver, 5);
+        this.driver = driver;
     }
 
     // Actions

@@ -19,6 +19,7 @@ public class HomeBodyComponent extends GoogleComponent {
     // Constructor
     public HomeBodyComponent(WebDriver driver) {
         super(driver);
+        this.driver = driver;
     }
 
     // Actions
