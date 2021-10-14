@@ -13,6 +13,10 @@ public class BaseTest {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
+    public WebDriver getDriver() {
+        return driver;
+    }
+
     @BeforeTest(alwaysRun = true)
     public void setUp() {
         Log.info("I am in Before Method! Test is starting!");
