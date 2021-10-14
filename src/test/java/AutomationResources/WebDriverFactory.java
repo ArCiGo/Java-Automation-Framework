@@ -1,6 +1,6 @@
 package AutomationResources;
 
-import PageObjectModel.Utilities.Log;
+import Utilities.Log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;

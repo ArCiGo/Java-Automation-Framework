@@ -15,21 +15,6 @@ import static Utilities.ExtentReports.ExtentTestManager.startTest;
 
 public class SampleTests extends BaseTest {
 
-    private String baseURL, itemToSearch;
-    GoogleHomePage googleHomePage;
-    GoogleResultsPage googleResultsPage;
-
-    @BeforeMethod
-    public void initSetup() {
-        String propertiesFile = "data.properties";
-        PropertyReader propertyReader = new PropertyReader();
-        googleHomePage = new GoogleHomePage(driver);
-        googleResultsPage = new GoogleResultsPage(driver);
-
-        baseURL = propertyReader.getProperty(propertiesFile, "GOOGLE_URL");
-        itemToSearch = propertyReader.getProperty(propertiesFile, "ITEM_TO_SEARCH");
-    }
-
     @Test(description = "This is a sample test.")
     public void Test1(Method method) {
         startTest(method.getName(), "This is a sample test.");

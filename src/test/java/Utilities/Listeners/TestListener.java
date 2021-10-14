@@ -1,6 +1,6 @@
 package Utilities.Listeners;
 
-import PageObjectModel.Utilities.Log;
+import Utilities.Log;
 import Tests.BaseTest;
 import Utilities.ExtentReports.ExtentManager;
 import com.aventstack.extentreports.Status;
