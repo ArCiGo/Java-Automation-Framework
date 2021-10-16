@@ -13,6 +13,7 @@
                     <include name="Test1" />
                     <include name="Test2" />
                     <include name="Test3" />
+                    <include name="Test4" />
                 </methods>
             </class>
         </classes>
