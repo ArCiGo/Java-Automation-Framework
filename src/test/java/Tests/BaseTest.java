@@ -29,7 +29,7 @@ public class BaseTest {
         Log.info("I am in Before Method! Test is starting!");
 
         driver = WebDriverFactory.getDriver(BrowserType.Chrome);
-        wait = new WebDriverWait(driver, 5);
+        wait = new WebDriverWait(driver, 10);
         driver.manage().window().maximize();
     }
 

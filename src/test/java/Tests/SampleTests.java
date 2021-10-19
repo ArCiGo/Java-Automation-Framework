@@ -1,19 +1,10 @@
 package Tests;
 
-import Models.CsvBean;
-import Models.MockarooFakeModel;
-import Utilities.Utils;
-import com.opencsv.bean.CsvToBean;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.lang.reflect.Method;
-import java.net.URISyntaxException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
 
 import static Utilities.ExtentReports.ExtentTestManager.startTest;
 
@@ -50,18 +41,5 @@ public class SampleTests extends BaseTest {
         driver.navigate().to(baseURL);
 
         driver.findElement(By.id("sample"));
-    }
-
-    @Test(description = "Gets the data stored in a CSV file")
-    public void Test4(Method method) throws URISyntaxException {
-        startTest(method.getName(),"Gets the data stored in a CSV file");
-
-        String path = "src/test/java/Data/SampleData_2.csv";
-        var records = Utils.readDataLineByLine(path, MockarooFakeModel.class);
-
-        for (Object obj : records) {
-            MockarooFakeModel mock = (MockarooFakeModel) obj;
-            System.out.println(mock.getDate());
-        }
     }
 }

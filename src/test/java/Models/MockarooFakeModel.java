@@ -3,7 +3,6 @@ package Models;
 import Utilities.Log;
 import com.opencsv.bean.CsvBindByName;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -81,10 +80,10 @@ public class MockarooFakeModel extends CsvBean {
 
     public Date getDate() {
         try {
-            Date date = new SimpleDateFormat("dd/MM/yyyy").parse(this.date);
-            return date;
+            return new SimpleDateFormat("dd/MM/yyyy").parse(this.date);
         } catch (ParseException ex) {
             Log.error(ex.toString());
+
             return null;
         }
     }

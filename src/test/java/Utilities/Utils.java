@@ -38,6 +38,7 @@ public class Utils {
             return csvTransfer.getCsvList();
         } catch(Exception ex) {
             Log.error(ex.toString());
+
             return null;
         }
     }
