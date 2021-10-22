@@ -2,9 +2,7 @@ package Tests;
 
 import AutomationResources.BrowserType;
 import AutomationResources.WebDriverFactory;
-import PageObjectModel.Pages.GoogleHomePage;
-import PageObjectModel.Pages.GoogleResultsPage;
-import Utilities.Log;
+import PageObjectModel.Utilities.Log;
 import Utilities.PropertyReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;

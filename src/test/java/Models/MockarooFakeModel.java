@@ -1,6 +1,6 @@
 package Models;
 
-import Utilities.Log;
+import PageObjectModel.Utilities.Log;
 import com.opencsv.bean.CsvBindByName;
 
 import java.text.ParseException;

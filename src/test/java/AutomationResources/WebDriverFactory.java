@@ -1,11 +1,10 @@
 package AutomationResources;
 
-import Utilities.Log;
+import PageObjectModel.Utilities.Log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import static Utilities.OperatingSystem.getOperatingSystem;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebDriverFactory {

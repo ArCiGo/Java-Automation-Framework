@@ -35,7 +35,7 @@ public class AuthenticationBodyComponent extends APComponent {
     // Constructor
     public AuthenticationBodyComponent(WebDriver driver) {
         super(driver);
-        // this.driver = driver;
+        this.driver = driver;
         wait = new WebDriverWait(driver, 5);
     }
 
