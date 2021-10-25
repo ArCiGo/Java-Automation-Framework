@@ -10,7 +10,7 @@ import static Utilities.ExtentReports.ExtentTestManager.startTest;
 
 public class SampleTests extends BaseTest {
 
-    @Test(description = "This is a sample test.")
+    /* @Test(description = "This is a sample test.")
     public void Test1(Method method) {
         startTest(method.getName(), "This is a sample test.");
 
@@ -41,5 +41,5 @@ public class SampleTests extends BaseTest {
         driver.navigate().to(baseURL);
 
         driver.findElement(By.id("sample"));
-    }
+    } */
 }

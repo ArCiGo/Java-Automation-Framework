@@ -23,7 +23,7 @@ public class ShoppingCartPaymentMethodBodyComponent extends APComponent {
         wait = new WebDriverWait(driver, 5);
     }
 
-    public APShoppingCartOrderConfirmationPage() clickOnBankwireButton() {
+    public APShoppingCartOrderConfirmationPage clickOnBankwireButton() {
         bankwireButton.click();
 
         return new APShoppingCartOrderConfirmationPage(driver);

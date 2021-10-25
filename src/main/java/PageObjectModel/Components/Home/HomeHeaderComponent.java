@@ -1,6 +1,8 @@
 package PageObjectModel.Components.Home;
 
 import PageObjectModel.Components.APComponent;
+import PageObjectModel.Pages.APAuthenticationPage;
+import PageObjectModel.Pages.APHomePage;
 import PageObjectModel.Utilities.Log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -63,7 +65,7 @@ public class HomeHeaderComponent extends APComponent {
         return new APHomePage(driver);
     }
 
-    public APShoppingCartSummaryPage clickOnLinkButton() {
+    public APShoppingCartSummaryPage clickOnCartLinkButton() {
         cartLinkButton.click();
 
         return new APShoppingCartSummaryPage(driver);

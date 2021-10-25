@@ -24,7 +24,7 @@ public class ShoppingCartOrderSummaryBankwireBodyComponent extends APComponent {
     }
 
     // Actions
-    public APShoppingCartOrderSummaryBankwirePage() {
+    public APShoppingCartOrderSummaryBankwirePage clickOnConfirmOrderButton() {
         confirmOrderButton.click();
 
         return new APShoppingCartOrderSummaryBankwirePage(driver);

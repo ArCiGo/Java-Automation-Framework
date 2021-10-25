@@ -50,7 +50,7 @@ public class HomeBodyComponent extends APComponent {
 
                 if(cartButtons.get(j).isDisplayed() && (clothes.get(i).equals(clotheImages.get(j).getAttribute("alt")))) {
                     cartButtons.get(j).click();
-                    wait.until(ExpectedConditions.visibilityOf(modalConfirmation);
+                    wait.until(ExpectedConditions.visibilityOf(modalConfirmation));
                     continueShoppingButton.click();
                     homeHeaderComponent.isLoaded();
                 }
