@@ -15,8 +15,6 @@ public class BaseTest {
     protected String baseURL, itemToSearch;
     protected WebDriver driver;
     protected WebDriverWait wait;
-    protected GoogleHomePage googleHomePage;
-    protected GoogleResultsPage googleResultsPage;
 
     public WebDriver getDriver() {
         return driver;
@@ -35,8 +33,6 @@ public class BaseTest {
     public void initSetup() {
         String propertiesFile = "data.properties";
         PropertyReader propertyReader = new PropertyReader();
-        googleHomePage = new GoogleHomePage(driver);
-        googleResultsPage = new GoogleResultsPage(driver);
 
         baseURL = propertyReader.getProperty(propertiesFile, "GOOGLE_URL");
         itemToSearch = propertyReader.getProperty(propertiesFile, "ITEM_TO_SEARCH");

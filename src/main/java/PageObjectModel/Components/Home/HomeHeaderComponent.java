@@ -3,6 +3,7 @@ package PageObjectModel.Components.Home;
 import PageObjectModel.Components.APComponent;
 import PageObjectModel.Pages.APAuthenticationPage;
 import PageObjectModel.Pages.APHomePage;
+import PageObjectModel.Pages.APShoppingCartSummaryPage;
 import PageObjectModel.Utilities.Log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

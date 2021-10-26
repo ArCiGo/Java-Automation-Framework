@@ -1,6 +1,7 @@
 package PageObjectModel.Components.ShoppingCartAddress;
 
 import PageObjectModel.Components.APComponent;
+import PageObjectModel.Pages.APShoppingCartShippingPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

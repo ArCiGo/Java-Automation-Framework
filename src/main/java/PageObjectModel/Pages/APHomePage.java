@@ -46,7 +46,7 @@ public class APHomePage extends BasePage {
     }
 
     public APShoppingCartSummaryPage clickOnCartLinkButton() {
-        return homeHeaderComponent.ClickOnCartLinkButton();
+        return homeHeaderComponent.clickOnCartLinkButton();
     }
 
     public void addItemsToCart(List<String> clothes) {

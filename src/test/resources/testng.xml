@@ -15,11 +15,6 @@
                     <include name="Test3" />
                 </methods>
             </class>
-            <class name="Tests.SampleDataTests">
-                <methods>
-                    <include name="GetCSV" />
-                </methods>
-            </class>
         </classes>
     </test>
 </suite>

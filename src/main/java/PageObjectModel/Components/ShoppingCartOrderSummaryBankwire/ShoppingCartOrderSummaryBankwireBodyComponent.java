@@ -1,6 +1,7 @@
 package PageObjectModel.Components.ShoppingCartOrderSummaryBankwire;
 
 import PageObjectModel.Components.APComponent;
+import PageObjectModel.Pages.APShoppingCartOrderSummaryBankwirePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

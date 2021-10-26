@@ -1,6 +1,8 @@
 package PageObjectModel.Components.Authentication;
 
 import PageObjectModel.Components.APComponent;
+import PageObjectModel.Pages.APCreateAccountPage;
+import PageObjectModel.Pages.APMyAccountPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

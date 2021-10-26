@@ -1,6 +1,7 @@
 package PageObjectModel.Components.ShoppingCartSummary;
 
 import PageObjectModel.Components.APComponent;
+import PageObjectModel.Pages.APShoppingCartAddressesPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -41,9 +42,9 @@ public class ShoppingCartSummaryBodyComponent extends APComponent {
         return false;
     }
 
-    public APShoppingCartAddressPage clickOnCheckoutButton() {
+    public APShoppingCartAddressesPage clickOnCheckoutButton() {
         checkoutButton.click();
 
-        return new APShoppingCartAddressPage(driver);
+        return new APShoppingCartAddressesPage(driver);
     }
 }
