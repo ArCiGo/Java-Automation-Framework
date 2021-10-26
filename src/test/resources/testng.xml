@@ -8,7 +8,7 @@
 
     <test name="Regression" >
         <classes>
-            <class name="Tests.SampleTests">
+            <class name="Tests.AutomationPracticesTests">
                 <methods>
                     <include name="Test1" />
                     <include name="Test2" />

@@ -2,6 +2,7 @@ package Tests;
 
 import AutomationResources.BrowserType;
 import AutomationResources.WebDriverFactory;
+import PageObjectModel.Pages.*;
 import PageObjectModel.Utilities.Log;
 import Utilities.PropertyReader;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +16,16 @@ public class BaseTest {
     protected String baseURL, itemToSearch;
     protected WebDriver driver;
     protected WebDriverWait wait;
+    protected APAuthenticationPage apAuthenticationPage;
+    protected APCreateAccountPage apCreateAccountPage;
+    protected APHomePage apHomePage;
+    protected APMyAccountPage apMyAccountPage;
+    protected APShoppingCartAddressesPage apShoppingCartAddressesPage;
+    protected APShoppingCartOrderConfirmationPage apShoppingCartOrderConfirmationPage;
+    protected APShoppingCartOrderSummaryBankwirePage apShoppingCartOrderSummaryBankwirePage;
+    protected APShoppingCartPaymentMethodPage apShoppingCartPaymentMethodPage;
+    protected APShoppingCartShippingPage apShoppingCartShippingPage;
+    protected APShoppingCartSummaryPage apShoppingCartSummaryPage;
 
     public WebDriver getDriver() {
         return driver;
@@ -33,9 +44,18 @@ public class BaseTest {
     public void initSetup() {
         String propertiesFile = "data.properties";
         PropertyReader propertyReader = new PropertyReader();
+        apAuthenticationPage = new APAuthenticationPage(driver);
+        apCreateAccountPage = new APCreateAccountPage(driver);
+        apHomePage = new APHomePage(driver);
+        apMyAccountPage = new APMyAccountPage(driver);
+        apShoppingCartAddressesPage = new APShoppingCartAddressesPage(driver);
+        apShoppingCartOrderConfirmationPage = new APShoppingCartOrderConfirmationPage(driver);
+        apShoppingCartOrderSummaryBankwirePage = new APShoppingCartOrderSummaryBankwirePage(driver);
+        apShoppingCartPaymentMethodPage = new APShoppingCartPaymentMethodPage(driver);
+        apShoppingCartShippingPage = new APShoppingCartShippingPage(driver);
+        apShoppingCartSummaryPage = new APShoppingCartSummaryPage(driver);
 
-        baseURL = propertyReader.getProperty(propertiesFile, "GOOGLE_URL");
-        itemToSearch = propertyReader.getProperty(propertiesFile, "ITEM_TO_SEARCH");
+        baseURL = propertyReader.getProperty(propertiesFile, "AUTOMATION_PRACTICE_URL");
     }
 
     @AfterTest(alwaysRun = true)
