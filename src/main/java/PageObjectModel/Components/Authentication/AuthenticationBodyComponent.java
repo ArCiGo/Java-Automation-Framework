@@ -62,7 +62,7 @@ public class AuthenticationBodyComponent extends APComponent {
     }
 
     public APMyAccountPage clickOnSignInButton() {
-        wait.until(ExpectedConditions.visibilityOf(signInButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(signInButton)).click();
 
         return new APMyAccountPage(driver);
     }

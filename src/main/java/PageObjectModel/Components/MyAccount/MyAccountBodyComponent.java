@@ -22,7 +22,7 @@ public class MyAccountBodyComponent extends APComponent {
     public MyAccountBodyComponent(WebDriver driver) {
         super(driver);
         this.driver = driver;
-        wait = new WebDriverWait(driver, 5);
+        wait = new WebDriverWait(driver, 10);
     }
 
     // Actions

@@ -13,6 +13,22 @@ public class Mocks {
     private static List<PersonModel> personsList;
     private static PersonModel personModel;
 
+    public static PersonModel validCredentials() {
+        personModel = new PersonModel();
+        personModel.setEmail(dataFaker.internet().emailAddress());
+        personModel.setPassword(dataFaker.internet().password());
+
+        return personModel;
+    }
+
+    public static PersonModel invalidPersonalData() {
+        personModel = new PersonModel();
+        personModel.setEmail(dataFaker.internet().emailAddress());
+        personModel.setPassword(dataFaker.internet().password());
+
+        return personModel;
+    }
+
     public static List<PersonModel> personalData() {
         personsList = new ArrayList<PersonModel>();
         personModel = new PersonModel();
@@ -20,8 +36,6 @@ public class Mocks {
         personModel.setTitle(Title.Mr);
         personModel.setFirstName(dataFaker.name().firstName());
         personModel.setLastName(dataFaker.name().lastName());
-        personModel.setEmail(dataFaker.internet().emailAddress());
-        personModel.setPassword(dataFaker.internet().password());
         personModel.setDay("25");
         personModel.setMonth("July");
         personModel.setYear("1992");
@@ -42,12 +56,5 @@ public class Mocks {
         personsList.add(personModel);
 
         return personsList;
-    }
-
-    public static PersonModel invalidPersonalData() {
-        return personModel = new PersonModel() {{
-            setEmail(dataFaker.internet().emailAddress());
-            setPassword(dataFaker.internet().password());
-        }};
     }
 }

@@ -7,6 +7,7 @@ import PageObjectModel.Utilities.Log;
 import Utilities.PropertyReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -31,17 +32,17 @@ public class BaseTest {
         return driver;
     }
 
-    @BeforeTest
+    @BeforeMethod(alwaysRun = true)
     public void setUp() {
         Log.info("I am in Before Method! Test is starting!");
 
         driver = WebDriverFactory.getDriver(BrowserType.Chrome);
         wait = new WebDriverWait(driver, 10);
         driver.manage().window().maximize();
+        initSetup();
     }
 
-    @BeforeMethod
-    public void initSetup() {
+    private void initSetup() {
         String propertiesFile = "data.properties";
         PropertyReader propertyReader = new PropertyReader();
         apAuthenticationPage = new APAuthenticationPage(driver);
@@ -58,15 +59,11 @@ public class BaseTest {
         baseURL = propertyReader.getProperty(propertiesFile, "AUTOMATION_PRACTICE_URL");
     }
 
-    @AfterTest
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         Log.info("I am in After Method! Test is ending!");
 
-        if(driver == null)
-            return;
-
         driver.close();
         driver.quit();
-        driver = null;
     }
 }

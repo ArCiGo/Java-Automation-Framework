@@ -20,8 +20,8 @@ public class APCreateAccountPage extends BasePage {
     }
 
     // Actions
-    public void fillRegisterForm(List<PersonModel> personalData) {
-        createAccountBodyComponent.fillRegisterForm(personalData);
+    public void fillRegisterForm(List<PersonModel> personalData, String emailAddress, String password) {
+        createAccountBodyComponent.fillRegisterForm(personalData, emailAddress, password);
     }
 
     public APMyAccountPage clickOnRegisterButton() {

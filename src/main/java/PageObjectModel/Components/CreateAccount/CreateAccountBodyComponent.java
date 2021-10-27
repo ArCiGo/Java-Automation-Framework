@@ -108,7 +108,7 @@ public class CreateAccountBodyComponent extends APComponent {
     public CreateAccountBodyComponent(WebDriver driver) {
         super(driver);
         this.driver = driver;
-        wait = new WebDriverWait(driver, 5);
+        wait = new WebDriverWait(driver, 10);
     }
 
     // Actions
@@ -121,7 +121,7 @@ public class CreateAccountBodyComponent extends APComponent {
         }
     }
 
-    public void fillRegisterForm(List<PersonModel> personalData) {
+    public void fillRegisterForm(List<PersonModel> personalData, String emailAddress, String password) {
         selectTitle(personalData.get(0).getTitle());
 
         firstNameInput.clear();
@@ -130,11 +130,8 @@ public class CreateAccountBodyComponent extends APComponent {
         lastNameInput.clear();
         lastNameInput.sendKeys(personalData.get(0).getLastName());
 
-        emailInput.clear();
-        emailInput.sendKeys(personalData.get(0).getEmail());
-
         passwordInput.clear();
-        passwordInput.sendKeys(personalData.get(0).getPassword());
+        passwordInput.sendKeys(password);
 
         setDay(personalData.get(0).getDay());
         setMonth(personalData.get(0).getMonth());

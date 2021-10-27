@@ -10,7 +10,8 @@ import static Utilities.ExtentReports.ExtentTestManager.startTest;
 public class AutomationPracticesTests extends BaseTest {
 
     // Properties
-    private String emailAddress, password;
+    private String emailAddress = Mocks.validCredentials().getEmail(),
+            password = Mocks.validCredentials().getPassword();
 
     // Tests
     @Test(description = "It creates a new user in the store",
@@ -18,8 +19,8 @@ public class AutomationPracticesTests extends BaseTest {
     public void CreateNewUserWithValidData(Method method) {
         startTest(method.getName(), "It creates a new user in the store");
 
-        emailAddress = Mocks.personalData().get(0).getEmail();
-        password = Mocks.personalData().get(0).getPassword();
+        // emailAddress = Mocks.validCredentials().getEmail();
+        // password = Mocks.validCredentials().getPassword();
 
         apHomePage.goTo(baseURL);
         apHomePage.clickOnSignInButton();
@@ -27,7 +28,7 @@ public class AutomationPracticesTests extends BaseTest {
         apAuthenticationPage.fillCreateAccountForm(emailAddress);
         apAuthenticationPage.clickOnCreateAccountButton();
 
-        apCreateAccountPage.fillRegisterForm(Mocks.personalData());
+        apCreateAccountPage.fillRegisterForm(Mocks.personalData(), emailAddress, password);
         apCreateAccountPage.clickOnRegisterButton();
 
         Assert.assertTrue(apMyAccountPage.isLoaded());
@@ -56,6 +57,4 @@ public class AutomationPracticesTests extends BaseTest {
 
         Assert.assertEquals("Authentication failed.", apAuthenticationPage.IsErrorBannerDisplayed());
     }
-
-
 }
