@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
 
-    protected String baseURL, itemToSearch;
+    protected String baseURL;
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected APAuthenticationPage apAuthenticationPage;
@@ -31,7 +31,7 @@ public class BaseTest {
         return driver;
     }
 
-    @BeforeTest(alwaysRun = true)
+    @BeforeTest
     public void setUp() {
         Log.info("I am in Before Method! Test is starting!");
 
@@ -58,11 +58,15 @@ public class BaseTest {
         baseURL = propertyReader.getProperty(propertiesFile, "AUTOMATION_PRACTICE_URL");
     }
 
-    @AfterTest(alwaysRun = true)
+    @AfterTest
     public void tearDown() {
         Log.info("I am in After Method! Test is ending!");
 
+        if(driver == null)
+            return;
+
         driver.close();
         driver.quit();
+        driver = null;
     }
 }

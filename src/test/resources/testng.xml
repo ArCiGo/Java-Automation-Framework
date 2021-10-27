@@ -10,9 +10,9 @@
         <classes>
             <class name="Tests.AutomationPracticesTests">
                 <methods>
-                    <include name="Test1" />
-                    <include name="Test2" />
-                    <include name="Test3" />
+                    <include name="CreateNewUserWithValidData" />
+                    <include name="LoginWithAValidUser" />
+                    <include name="LoginWithAnInvalidUser" />
                 </methods>
             </class>
         </classes>

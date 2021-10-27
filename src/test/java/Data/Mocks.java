@@ -35,7 +35,7 @@ public class Mocks {
         personModel.setZipCode("11111");
         personModel.setCountry(dataFaker.address().country());
         personModel.setAdditionalInformation(dataFaker.lorem().sentence());
-        personModel.setHomePhone(dataFaker.phoneNumber().phoneNumber());
+        personModel.setHomePhone("8331234567");
         personModel.setMobilePhone(dataFaker.phoneNumber().cellPhone());
         personModel.setAddressAlias(dataFaker.hacker().adjective());
 

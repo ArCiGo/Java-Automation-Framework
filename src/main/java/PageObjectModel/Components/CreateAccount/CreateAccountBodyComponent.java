@@ -214,7 +214,7 @@ public class CreateAccountBodyComponent extends APComponent {
 
         for (WebElement item : monthOptions) {
             if(item.getText().trim().contains(month)) {
-                monthSelectElement.selectByVisibleText(month);
+                monthSelectElement.selectByVisibleText(item.getText());
             }
         }
     }

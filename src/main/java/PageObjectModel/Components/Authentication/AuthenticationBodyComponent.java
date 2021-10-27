@@ -48,7 +48,7 @@ public class AuthenticationBodyComponent extends APComponent {
     }
 
     public APCreateAccountPage clickOnCreateAccountButton() {
-        wait.until(ExpectedConditions.visibilityOf(createAccountButton));
+        wait.until(ExpectedConditions.visibilityOf(createAccountButton)).click();
 
         return new APCreateAccountPage(driver);
     }
@@ -62,7 +62,7 @@ public class AuthenticationBodyComponent extends APComponent {
     }
 
     public APMyAccountPage clickOnSignInButton() {
-        wait.until(ExpectedConditions.visibilityOf(signInButton));
+        wait.until(ExpectedConditions.visibilityOf(signInButton)).click();
 
         return new APMyAccountPage(driver);
     }
