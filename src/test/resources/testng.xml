@@ -13,6 +13,8 @@
                     <include name="CreateNewUserWithValidData" />
                     <include name="LoginWithAValidUser" />
                     <include name="LoginWithAnInvalidUser" />
+                    <include name="LogoutWithAValidUser" />
+                    <include name="AddingMultipleItemsToCart" />
                 </methods>
             </class>
         </classes>

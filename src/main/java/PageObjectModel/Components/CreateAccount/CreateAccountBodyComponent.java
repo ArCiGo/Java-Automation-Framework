@@ -121,7 +121,7 @@ public class CreateAccountBodyComponent extends APComponent {
         }
     }
 
-    public void fillRegisterForm(List<PersonModel> personalData, String emailAddress, String password) {
+    public void fillRegisterForm(List<PersonModel> personalData, String password) {
         selectTitle(personalData.get(0).getTitle());
 
         firstNameInput.clear();

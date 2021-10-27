@@ -16,6 +16,11 @@ public class APShoppingCartOrderConfirmationPage extends BasePage {
         shoppingCartOrderConfirmationBodyComponent = new ShoppingCartOrderConfirmationBodyComponent(driver);
     }
 
+    // Actions
+    public boolean isLoaded() {
+        return shoppingCartOrderConfirmationBodyComponent.isLoaded();
+    }
+
     public String getOrderConfirmationText() {
         return shoppingCartOrderConfirmationBodyComponent.getOrderConfirmationText();
     }
