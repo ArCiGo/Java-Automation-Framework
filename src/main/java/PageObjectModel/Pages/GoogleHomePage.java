@@ -11,17 +11,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class GoogleHomePage extends BasePage {
 
     // Attributes
-    private WebDriverWait wait;
     private HomeBodyComponent homeBodyComponent;
-
-    // Elements
-    @FindBy(how = How.XPATH, using = "//img[@alt='Google']")
-    public WebElement googleLogoImg;
 
     // Constructor
     public GoogleHomePage(WebDriver driver) {
         super(driver);
-        wait = new WebDriverWait(driver, 5);
         this.homeBodyComponent = new HomeBodyComponent(driver);
     }
 
@@ -30,20 +24,8 @@ public class GoogleHomePage extends BasePage {
         driver.navigate().to(url);
     }
 
-    /**
-     * This is a generic validation
-     */
-    public boolean isLoaded() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOf(this.googleLogoImg)).isDisplayed();
-        } catch (Exception ex) {
-            return false;
-        }
-    }
-
     public GoogleResultsPage fillSearchForm(String search) {
-        this.homeBodyComponent.fillSearchForm(search);
-
-        return new GoogleResultsPage(driver);
+        return this.homeBodyComponent.fillSearchForm(search);
+        // return new GoogleResultsPage(driver);
     }
 }

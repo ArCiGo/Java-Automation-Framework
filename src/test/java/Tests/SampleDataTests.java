@@ -27,7 +27,7 @@ public class SampleDataTests {
     }
 
     @Test(description = "Gets the data stored in a CSV file")
-    public void GetCSV(Method method) throws URISyntaxException, ParseException {
+    public void GetCSV(Method method) throws ParseException {
         startTest(method.getName(),"Gets the data stored in a CSV file");
 
         String path = csvFilePath;

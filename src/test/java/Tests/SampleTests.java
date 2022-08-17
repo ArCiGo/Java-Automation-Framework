@@ -27,11 +27,8 @@ public class SampleTests extends BaseTest {
         startTest(method.getName(), "This is a sample test using POM and components.");
 
         googleHomePage.goTo(baseURL);
-        Assert.assertTrue(googleHomePage.isLoaded());
-
         googleHomePage.fillSearchForm(itemToSearch);
 
-        Assert.assertTrue(googleResultsPage.isLoaded());
         Assert.assertTrue(googleResultsPage.resultsLabelIsLoaded());
     }
 

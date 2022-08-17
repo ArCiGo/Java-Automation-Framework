@@ -11,31 +11,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class GoogleResultsPage extends BasePage {
 
     // Attributes
-    private WebDriverWait wait;
     private ResultsBodyComponent resultsBodyComponent;
-
-    // Elements
-    @FindBy(how = How.XPATH, using = "//img[@alt='Google']")
-    public WebElement googleLogoImg;
 
     // Constructor
     public GoogleResultsPage(WebDriver driver) {
         super(driver);
-        wait = new WebDriverWait(driver, 5);
         this.resultsBodyComponent = new ResultsBodyComponent(driver);
     }
 
     // Actions
-    /**
-     * This is a generic validation
-     */
-    public boolean isLoaded() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOf(this.googleLogoImg)).isDisplayed();
-        } catch (Exception ex) {
-            return false;
-        }
-    }
 
     public boolean resultsLabelIsLoaded() {
         return this.resultsBodyComponent.resultsLabelIsLoaded();

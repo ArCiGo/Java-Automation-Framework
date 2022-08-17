@@ -20,16 +20,13 @@ public class ResultsBodyComponent extends GoogleComponent {
     // Constructor
     public ResultsBodyComponent(WebDriver driver) {
         super(driver);
+
         wait = new WebDriverWait(driver, 5);
         this.driver = driver;
     }
 
     // Actions
     public boolean resultsLabelIsLoaded() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOf(resultsLabel)).isDisplayed();
-        } catch (Exception ex) {
-            return false;
-        }
+        return wait.until(ExpectedConditions.visibilityOf(resultsLabel)).isDisplayed();
     }
 }
