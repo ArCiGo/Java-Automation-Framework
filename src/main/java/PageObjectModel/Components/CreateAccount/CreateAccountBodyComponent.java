@@ -107,6 +107,7 @@ public class CreateAccountBodyComponent extends APComponent {
     // Constructor
     public CreateAccountBodyComponent(WebDriver driver) {
         super(driver);
+
         this.driver = driver;
         wait = new WebDriverWait(driver, 10);
     }
@@ -117,6 +118,7 @@ public class CreateAccountBodyComponent extends APComponent {
             return wait.until(ExpectedConditions.visibilityOf(mrRadioButton)).isDisplayed();
         } catch (Exception ex) {
             Log.error(ex.toString());
+
             return false;
         }
     }

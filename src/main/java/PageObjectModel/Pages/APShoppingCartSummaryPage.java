@@ -15,6 +15,7 @@ public class APShoppingCartSummaryPage extends BasePage {
     // Constructor
     public APShoppingCartSummaryPage(WebDriver driver) {
         super(driver);
+
         shoppingCartSummaryBodyComponent = new ShoppingCartSummaryBodyComponent(driver);
     }
 

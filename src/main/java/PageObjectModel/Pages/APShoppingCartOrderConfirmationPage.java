@@ -13,6 +13,7 @@ public class APShoppingCartOrderConfirmationPage extends BasePage {
     // Constructor
     public APShoppingCartOrderConfirmationPage(WebDriver driver) {
         super(driver);
+
         shoppingCartOrderConfirmationBodyComponent = new ShoppingCartOrderConfirmationBodyComponent(driver);
     }
 

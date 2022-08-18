@@ -13,6 +13,7 @@ public class APShoppingCartPaymentMethodPage extends BasePage {
     // Constructor
     public APShoppingCartPaymentMethodPage(WebDriver driver) {
         super(driver);
+
         shoppingCartPaymentMethodBodyComponent = new ShoppingCartPaymentMethodBodyComponent(driver);
     }
 

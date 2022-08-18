@@ -13,6 +13,7 @@ public class APShoppingCartOrderSummaryBankwirePage extends BasePage {
     // Constructor
     public APShoppingCartOrderSummaryBankwirePage(WebDriver driver) {
         super(driver);
+
         shoppingCartOrderSummaryBankwireBodyComponent = new ShoppingCartOrderSummaryBankwireBodyComponent(driver);
     }
 

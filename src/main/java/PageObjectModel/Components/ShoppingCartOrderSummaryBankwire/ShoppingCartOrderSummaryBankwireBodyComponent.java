@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ShoppingCartOrderSummaryBankwireBodyComponent extends APComponent {
 
     // Attributes
-    private final WebDriverWait wait;
 
     // Elements
     @FindBy(how = How.XPATH, using = "//button[contains(@class, 'button btn')]")
@@ -20,8 +19,8 @@ public class ShoppingCartOrderSummaryBankwireBodyComponent extends APComponent {
     // Constructor
     public ShoppingCartOrderSummaryBankwireBodyComponent(WebDriver driver) {
         super(driver);
+
         this.driver = driver;
-        wait = new WebDriverWait(driver, 5);
     }
 
     // Actions

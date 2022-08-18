@@ -19,6 +19,7 @@ public class APHomePage extends BasePage {
     // Constructor
     public APHomePage(WebDriver driver) {
         super(driver);
+
         homeHeaderComponent = new HomeHeaderComponent(driver);
         homeBodyComponent = new HomeBodyComponent(driver);
     }

@@ -25,6 +25,7 @@ public class ShoppingCartOrderConfirmationBodyComponent extends APComponent {
     // Constructor
     public ShoppingCartOrderConfirmationBodyComponent(WebDriver driver) {
         super(driver);
+
         this.driver = driver;
         wait = new WebDriverWait(driver, 5);
     }

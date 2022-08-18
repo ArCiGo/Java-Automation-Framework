@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ShoppingCartShippingBodyComponent extends APComponent {
 
     // Attributes
-    private final WebDriverWait wait;
 
     // Elements
     @FindBy(how = How.ID, using = "cgv")
@@ -23,8 +22,8 @@ public class ShoppingCartShippingBodyComponent extends APComponent {
     // Constructor
     public ShoppingCartShippingBodyComponent(WebDriver driver) {
         super(driver);
+
         this.driver = driver;
-        wait = new WebDriverWait(driver, 5);
     }
 
     // Actions

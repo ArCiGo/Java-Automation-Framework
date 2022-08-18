@@ -33,6 +33,7 @@ public class HomeHeaderComponent extends APComponent {
     // Constructor
     public HomeHeaderComponent(WebDriver driver) {
         super(driver);
+
         this.driver = driver;
         wait = new WebDriverWait(driver, 5);
     }

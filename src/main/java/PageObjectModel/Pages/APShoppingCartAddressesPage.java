@@ -13,6 +13,7 @@ public class APShoppingCartAddressesPage extends BasePage {
     // Constructor
     public APShoppingCartAddressesPage(WebDriver driver) {
         super(driver);
+
         shoppingCartAddressesBodyComponent = new ShoppingCartAddressesBodyComponent(driver);
     }
 

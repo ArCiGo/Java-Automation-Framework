@@ -21,6 +21,7 @@ public class MyAccountBodyComponent extends APComponent {
     // Constructor
     public MyAccountBodyComponent(WebDriver driver) {
         super(driver);
+
         this.driver = driver;
         wait = new WebDriverWait(driver, 10);
     }

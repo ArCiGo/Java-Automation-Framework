@@ -13,6 +13,7 @@ public class APMyAccountPage extends BasePage {
     // Constructor
     public APMyAccountPage(WebDriver driver) {
         super(driver);
+
         myAccountBodyComponent = new MyAccountBodyComponent(driver);
     }
 

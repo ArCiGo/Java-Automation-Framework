@@ -16,6 +16,7 @@ public class APCreateAccountPage extends BasePage {
     // Constructor
     public APCreateAccountPage(WebDriver driver) {
         super(driver);
+
         createAccountBodyComponent = new CreateAccountBodyComponent(driver);
     }
 

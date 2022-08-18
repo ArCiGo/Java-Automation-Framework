@@ -13,6 +13,7 @@ public class APAuthenticationPage extends BasePage {
     // Constructor
     public APAuthenticationPage(WebDriver driver) {
         super(driver);
+
         authenticationBodyComponent = new AuthenticationBodyComponent(driver);
     }
 

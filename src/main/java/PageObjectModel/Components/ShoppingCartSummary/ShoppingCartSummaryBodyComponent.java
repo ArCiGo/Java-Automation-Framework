@@ -13,7 +13,6 @@ import java.util.List;
 public class ShoppingCartSummaryBodyComponent extends APComponent {
 
     // Attributes
-    private final WebDriverWait wait;
 
     // Elements
     @FindBy(how = How.CSS, using = "td p.product-name a")
@@ -25,8 +24,8 @@ public class ShoppingCartSummaryBodyComponent extends APComponent {
     // Constructor
     public ShoppingCartSummaryBodyComponent(WebDriver driver) {
         super(driver);
+
         this.driver = driver;
-        wait = new WebDriverWait(driver, 5);
     }
 
     // Actions

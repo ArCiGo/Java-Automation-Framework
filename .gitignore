@@ -139,3 +139,4 @@ target/*
 extent-reports/*
 
 # End of https://www.toptal.com/developers/gitignore/api/java,intellij
+**/.DS_Store

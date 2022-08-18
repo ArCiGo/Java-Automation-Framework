@@ -13,6 +13,11 @@ public class Mocks {
     private static List<PersonModel> personsList;
     private static PersonModel personModel;
 
+    public final static List<String> clothes = new ArrayList<String>() {{
+        add("Faded Short Sleeve T-shirts");
+        add("Printed Chiffon Dress");
+    }};
+
     public static PersonModel validCredentials() {
         personModel = new PersonModel();
         personModel.setEmail(dataFaker.internet().emailAddress());
