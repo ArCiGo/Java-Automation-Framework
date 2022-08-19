@@ -81,16 +81,11 @@ public class AutomationPracticesTests extends BaseTest {
     public void AddingMultipleItemsToCart(Method method) {
         startTest(method.getName(), "It adds multiple items to the shopping cart");
 
-        List<String> clothes = new ArrayList<String>() {{
-            add("Faded Short Sleeve T-shirts");
-            add("Printed Chiffon Dress");
-        }};
-
         apHomePage.goTo(baseURL);
-        apHomePage.addItemsToCart(clothes);
+        apHomePage.addItemsToCart(Mocks.clothes);
         apHomePage.clickOnCartLinkButton();
 
-        Assert.assertTrue(apShoppingCartSummaryPage.isOnShoppingCart(clothes));
+        Assert.assertTrue(apShoppingCartSummaryPage.isOnShoppingCart(Mocks.clothes));
         apShoppingCartSummaryPage.clickOnCheckoutButton();
 
         apAuthenticationPage.fillSignInForm(emailAddress, password);

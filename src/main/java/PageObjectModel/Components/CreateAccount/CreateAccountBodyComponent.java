@@ -123,58 +123,58 @@ public class CreateAccountBodyComponent extends APComponent {
         }
     }
 
-    public void fillRegisterForm(List<PersonModel> personalData, String password) {
-        selectTitle(personalData.get(0).getTitle());
+    public void fillRegisterForm(PersonModel personalData, String password) {
+        selectTitle(personalData.getTitle());
 
         firstNameInput.clear();
-        firstNameInput.sendKeys(personalData.get(0).getFirstName());
+        firstNameInput.sendKeys(personalData.getFirstName());
 
         lastNameInput.clear();
-        lastNameInput.sendKeys(personalData.get(0).getLastName());
+        lastNameInput.sendKeys(personalData.getLastName());
 
         passwordInput.clear();
         passwordInput.sendKeys(password);
 
-        setDay(personalData.get(0).getDay());
-        setMonth(personalData.get(0).getMonth());
-        setYear(personalData.get(0).getYear());
+        setDay(personalData.getDay());
+        setMonth(personalData.getMonth());
+        setYear(personalData.getYear());
 
         addressFirstNameInput.clear();
-        addressFirstNameInput.sendKeys(personalData.get(0).getFirstNameAddress());
+        addressFirstNameInput.sendKeys(personalData.getFirstNameAddress());
 
         addressLastNameInput.clear();
-        addressLastNameInput.sendKeys(personalData.get(0).getLastNameAddress());
+        addressLastNameInput.sendKeys(personalData.getLastNameAddress());
 
         companyInput.clear();
-        companyInput.sendKeys(personalData.get(0).getCompany());
+        companyInput.sendKeys(personalData.getCompany());
 
         addressInput.clear();
-        addressInput.sendKeys(personalData.get(0).getAddress());
+        addressInput.sendKeys(personalData.getAddress());
 
         addressLine2Input.clear();
-        addressLine2Input.sendKeys(personalData.get(0).getAddressLine2());
+        addressLine2Input.sendKeys(personalData.getAddressLine2());
 
         cityInput.clear();
-        cityInput.sendKeys(personalData.get(0).getCity());
+        cityInput.sendKeys(personalData.getCity());
 
-        setState(personalData.get(0).getState());
+        setState(personalData.getState());
 
         zipCodeInput.clear();
-        zipCodeInput.sendKeys(personalData.get(0).getZipCode());
+        zipCodeInput.sendKeys(personalData.getZipCode());
 
-        setCountry(personalData.get(0).getCountry());
+        setCountry(personalData.getCountry());
 
         additionalInformationTextarea.clear();
-        additionalInformationTextarea.sendKeys(personalData.get(0).getAdditionalInformation());
+        additionalInformationTextarea.sendKeys(personalData.getAdditionalInformation());
 
         homePhone.clear();
-        homePhone.sendKeys(personalData.get(0).getHomePhone());
+        homePhone.sendKeys(personalData.getHomePhone());
 
         mobilePhone.clear();
-        mobilePhone.sendKeys(personalData.get(0).getMobilePhone());
+        mobilePhone.sendKeys(personalData.getMobilePhone());
 
         alias.clear();
-        alias.sendKeys(personalData.get(0).getAddressAlias());
+        alias.sendKeys(personalData.getAddressAlias());
     }
 
     private void selectTitle(Title title) {

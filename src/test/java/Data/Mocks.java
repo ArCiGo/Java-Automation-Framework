@@ -34,8 +34,7 @@ public class Mocks {
         return personModel;
     }
 
-    public static List<PersonModel> personalData() {
-        personsList = new ArrayList<PersonModel>();
+    public static PersonModel personalData() {
         personModel = new PersonModel();
 
         personModel.setTitle(Title.Mr);
@@ -58,8 +57,6 @@ public class Mocks {
         personModel.setMobilePhone(dataFaker.phoneNumber().cellPhone());
         personModel.setAddressAlias(dataFaker.hacker().adjective());
 
-        personsList.add(personModel);
-
-        return personsList;
+        return personModel;
     }
 }

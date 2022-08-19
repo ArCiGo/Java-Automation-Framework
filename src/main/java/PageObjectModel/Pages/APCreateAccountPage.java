@@ -21,7 +21,7 @@ public class APCreateAccountPage extends BasePage {
     }
 
     // Actions
-    public void fillRegisterForm(List<PersonModel> personalData, String password) {
+    public void fillRegisterForm(PersonModel personalData, String password) {
         createAccountBodyComponent.fillRegisterForm(personalData, password);
     }
 
