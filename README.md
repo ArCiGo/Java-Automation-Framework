@@ -22,20 +22,36 @@ The **Automation Practice** store was automated using _Java + Selenium_.
 
 ```bash
 .
-├── PageObjectModel/
-│   ├── Components/
-│   │   ├── Home
-│   │   └── Results
-│   ├── Pages
-│   └── Utilities
-└── Tests/
-    ├── APIAndData/
-    │   ├── Client
-    │   ├── Data
-    │   └── Models
-    ├── UI/
-    │   └── AutomationResources
-    └── Utilities
+├── .idea
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── PageObjectModel/
+│   │           ├── Components/
+│   │           │   ├── Authentication
+│   │           │   ├── CreateAccount
+│   │           │   ├── Home
+│   │           │   ├── MyAccount
+│   │           │   ├── ShoppingCartAddress
+│   │           │   ├── ShoppingCartOrderInformation
+│   │           │   ├── ShoppingCartOrderSummaryBankwire
+│   │           │   ├── ShoppingCartPaymentMethod
+│   │           │   ├── ShoppingCartShipping
+│   │           │   └── ShoppingCartSummary
+│   │           ├── Models
+│   │           ├── Pages
+│   │           └── Utilities
+│   └── test/
+│       ├── java/
+│       │   ├── AutomationResources
+│       │   ├── Data
+│       │   ├── Models
+│       │   ├── Tests
+│       │   └── Utilities/
+│       │       ├── ExtentReports
+│       │       └── Listeners
+│       └── resources
+└── target
 ```
 
 ## Setup 🛠️
@@ -59,7 +75,7 @@ and Documentation_.
 
 1. Look for the _testng.xml_ file at **src/ => test/ => resources/**, right click over the file and click on _Run_.
 
-When you execute the tests, new folders are generated at the workspace root (**UIReports**). Inside of these folders, you are going to see the *index.html* 
+When you execute the tests, new folders are generated at the workspace root (**extent-reports**). Inside of this folder, you are going to see the *index.html* 
 report (you can open them using your favorite browser). Also, new log files are generated and you can open them using any text editor.
 
 ![UI Report Sample 2](./Image02.png)
