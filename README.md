@@ -58,7 +58,7 @@ The following steps can be executed using the terminal and UI of **IntelliJ**.
 
 1. Look for the _testng.xml_ file at **src/ => test/ => resources/**, right click over the file and click on _Run_.
 
-When you execute the tests, new folders are generated at the workspace root (**APIReports** and **UIReports**). Inside of these folders, you are going to see the *index.html* reports (you can open them using your favorite browser). Also, new log files are generated (*APIlogs-^.txt*, *UIlogs-^.txt*) and you can open them using any text editor.
+When you execute the tests a new folder is generated at the workspace root (**extent-reports**). Inside of this folder, you are going to see the *index.html* reports (you can open them using your favorite browser). Also, new log files are generated and you can open them using any text editor.
 
 ![UI Report Sample 1](./Image01.png)
 
