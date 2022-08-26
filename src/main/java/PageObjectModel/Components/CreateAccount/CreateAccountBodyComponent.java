@@ -13,7 +13,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CreateAccountBodyComponent extends APComponent {
@@ -27,6 +26,9 @@ public class CreateAccountBodyComponent extends APComponent {
 
     @FindBy(how = How.ID, using = "id_gender1")
     public WebElement mrRadioButton;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='clearfix']/label")
+    public WebElement titleGenderLabel;
 
     @FindBy(how = How.ID, using = "id_gender2")
     public WebElement mrsRadioButton;
@@ -113,14 +115,8 @@ public class CreateAccountBodyComponent extends APComponent {
     }
 
     // Actions
-    public boolean titleRadioButtonsIsLoaded() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOf(mrRadioButton)).isDisplayed();
-        } catch (Exception ex) {
-            Log.error(ex.toString());
-
-            return false;
-        }
+    public boolean titleGenderLabelIsLoaded() {
+        return wait.until(ExpectedConditions.visibilityOf(titleGenderLabel)).isDisplayed();
     }
 
     public void fillRegisterForm(PersonModel personalData, String password) {
@@ -178,7 +174,7 @@ public class CreateAccountBodyComponent extends APComponent {
     }
 
     private void selectTitle(Title title) {
-        titleRadioButtonsIsLoaded();
+        titleGenderLabelIsLoaded();
 
         switch (title)
         {

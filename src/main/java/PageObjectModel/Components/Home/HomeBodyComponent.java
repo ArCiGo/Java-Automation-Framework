@@ -38,7 +38,7 @@ public class HomeBodyComponent extends APComponent {
         super(driver);
 
         this.driver = driver;
-        wait = new WebDriverWait(driver, 5);
+        wait = new WebDriverWait(driver, 10);
         homeHeaderComponent = new HomeHeaderComponent(driver);
     }
 
