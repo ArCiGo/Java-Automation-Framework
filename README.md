@@ -4,6 +4,8 @@
 
 A *Java + Selenium* template to create new automation framework projects!
 
+**Before you continue reading:** *You can check in this repository a [full sample](https://github.com/ArCiGo/Java-Automation-Framework/tree/SampleProject_1) made based on this template.*
+
 ## Tools ⚙️
 
 * *Java v18.0.2.*
